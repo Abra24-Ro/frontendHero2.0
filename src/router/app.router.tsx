@@ -2,14 +2,15 @@ import { HomePage } from "../heroes/home/HomePage";
 import { HeroPage } from "../heroes/pages/HeroPage";
 import { AdminPage } from "../admin/pages/AdminPage";
 import { AdminLayout } from "../admin/layouts/AdminLayout";
-import { createBrowserRouter, Navigate } from "react-router";
+import { createHashRouter, Navigate } from "react-router";
 import { HeroesLayout } from "../heroes/layouts/HeroesLayout";
 import { lazy } from "react";
 
 // importación perezosa
 const SearchPage = lazy(() => import("../heroes/search/SearchPage"));
 
-export const appRouter = createBrowserRouter([
+// export const appRouter = createBrowserRouter([
+export const appRouter = createHashRouter([
   {
     path: "/",
     element: <HeroesLayout />,
